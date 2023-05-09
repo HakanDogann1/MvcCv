@@ -1,0 +1,56 @@
+﻿@using MvcCv.Models.Entity
+@model List<TBLSosyalMedya>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin-top:30px;">
+    <button class="btn btn-info" data-toggle="modal" data-target="#Modal1">Sosyal Medya Hesabı Ekle</button>
+</div>
+<table class="table table-bordered" style="margin-top:30px">
+    <tr>
+        <th>Id</th>
+        <th>Ad</th>
+        <th>Link</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Ad</td>
+                <td>@item.Link</td>
+                <td><a class="btn btn-danger btn-sm" href="/SosyalMedya/Sil/@item.Id"><i class="fas fa-trash"></i>Sil</a></td>
+                <td><a class="btn btn-info btn-sm" href="/SosyalMedya/Güncelle/@item.Id"> <i class="fas fa-pencil-alt"></i>Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Sosyal Medya Ekleme Penceresi</h3>
+            </div>
+            
+            <form method="post" action="/SosyalMedya/Ekle/" class="form-contol">
+                        <div class="modal-body">
+                            <label>Sosyal medya ismi</label>
+                            <input type="text" name="Ad" />
+                        </div>
+                    <div class="modal-body">
+                        <label>İkon Değeri</label>
+                        <input type="text" name="Link" />
+                    </div>
+                    <div>
+                        <button class="btn btn-success">Ekle</button>
+                    </div>
+            </form>
+            
+        </div>
+    </div>
+</div>

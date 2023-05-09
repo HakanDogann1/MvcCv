@@ -1,0 +1,35 @@
+﻿@model MvcCv.Models.Entity.TBLDeneyimlerim
+@{
+    ViewBag.Title = "ModifiedExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<div>
+    <form method="post">
+        <div>
+            @Html.Label("Id")
+            @Html.TextBoxFor(x=>x.Id , new {@class="form-control"})
+        </div>
+        <div>
+            @Html.Label("Başlık")
+            @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        </div>
+        <div>
+            @Html.Label("Alt Başlık")
+            @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+        </div>
+        <div>
+            @Html.Label("Açıklama")
+            @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+        </div>
+        <div>
+            @Html.Label("Tarih")
+            @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success">Ekle</button>
+        </div>
+    </form>
+</div>
+

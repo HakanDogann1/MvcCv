@@ -1,0 +1,27 @@
+﻿@model MvcCv.Models.Entity.TBLYeteneklerim
+@{
+    ViewBag.Title = "YetenekGüncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    <form method="post">
+        <div>
+            @Html.Label("Id")
+            @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+        </div>
+        <div>
+            @Html.Label("Yetenek")
+            @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control" })
+        </div>
+        <div>
+            @Html.Label("Oran")
+            @Html.TextBoxFor(x => x.Oran, new { @class = "form-control" })
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success">Düzenle</button>
+        </div>
+    </form>
+</div>
+
+

@@ -1,0 +1,41 @@
+﻿@model MvcCv.Models.Entity.TBLEgitimlerim
+@{
+    ViewBag.Title = "EgitimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    <form method="post" class="form-group">
+        <div>
+            <label>Başlık</label>
+            <input type="text" class="form-control" name="Baslik" />
+            @Html.ValidationMessageFor(m => m.Baslik, "", new { @style = "color:red;" })
+        </div>
+        <div>
+            <label>Alt Başlık 1</label>
+            <input type="text" class="form-control" name="AltBaslik1" />
+
+        </div>
+        <div>
+            <label>Alt Başlık 2</label>
+            <input type="text" class="form-control" name="AltBaslik2" />
+        </div>
+        <div>
+            <label>Açıklama</label>
+            <input type="text" class="form-control" name="Aciklama" />
+        </div>
+        <div>
+            <label>GANO</label>
+            <input type="text" class="form-control" name="GNO" />
+            @Html.ValidationMessageFor(m=>m.GNO , "" , new {@style="color:blue"})
+        </div>
+        <div>
+            <label>Tarih</label>
+            <input type="date" class="form-control" name="Tarih" />
+        </div>
+        <div>
+            <button type="submit" class="btn btn-info">Ekle</button>
+        </div>
+    </form>
+</div>
+

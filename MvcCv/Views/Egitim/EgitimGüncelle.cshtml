@@ -1,0 +1,36 @@
+﻿@model MvcCv.Models.Entity.TBLEgitimlerim
+@{
+    ViewBag.Title = "EgitimGüncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <div>
+        @Html.Label("Id")
+        @Html.TextBoxFor(m => m.Id , new {@class="form-control"} )
+    </div>
+    <div>
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(m => m.Baslik, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.Label("Alt Başlık 1")
+        @Html.TextBoxFor(m => m.AltBaslik1, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.Label("Alt Başlık 2")
+        @Html.TextBoxFor(m => m.AltBaslik2, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.Label("GANO")
+        @Html.TextBoxFor(m => m.GNO, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.Label("Tarih")
+        @Html.TextBoxFor(m => m.Tarih, new { @class = "form-control" })
+    </div>
+    <div>
+        <button type="submit" class="btn btn-info">Güncelle</button>
+    </div>
+</form>
+

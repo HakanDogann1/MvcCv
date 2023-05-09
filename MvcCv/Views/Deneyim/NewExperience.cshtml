@@ -1,0 +1,30 @@
+﻿@using MvcCv.Models.Entity
+@model List<TBLDeneyimlerim> 
+@{
+    ViewBag.Title = "NewExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<div>
+    <form method="post" class="form-group">
+        <div>
+            <label>Başlık</label>
+            <input type="text" class="form-control" name="Baslik"/>
+        </div>
+        <div>
+            <label>Alt Başlık</label>
+            <input type="text" class="form-control" name="AltBaslik"/>
+        </div>
+        <div>
+            <label>Açıklama</label>
+            <input type="text" class="form-control" name="Aciklama" />
+        </div>
+        <div>
+            <label>Tarih</label>
+            <input type="" class="form-control" name="Tarih"/>
+        </div>
+         <div>
+             <button type="submit" class="btn btn-success">Ekle</button>
+         </div>
+    </form>
+</div>

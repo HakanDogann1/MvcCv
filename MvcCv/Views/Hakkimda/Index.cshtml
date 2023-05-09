@@ -1,0 +1,39 @@
+﻿@using MvcCv.Models.Entity
+@model List<TBLHakkimda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h3>Hakkımda Menüsü</h3>
+<form method="post">
+    @foreach (var item in Model)
+    {
+    <div>
+        <label>Ad</label>
+        <input typr="text" class="form-control" name="İsim" value="@item.İsim">
+    </div>
+    <div>
+        <label>Soyad</label>
+        <input typr="text" class="form-control" name="Soyad" value="@item.Soyad">
+    </div>
+    <div>
+        <label>Telefon</label>
+        <input typr="text" class="form-control" name="Telefon" value="@item.Telefon">
+    </div>
+    <div>
+        <label>Adres</label>
+        <input typr="text" class="form-control" name="Adres" value="@item.Adres">
+    </div>
+    <div>
+        <label>Mail</label>
+        <input typr="text" class="form-control" name="Mail" value="@item.Mail">
+    </div>
+    <div>
+        <label>Açıklama</label>
+        <input typr="text" class="form-control" name="Aciklama" value="@item.Aciklama">
+    </div>
+    }
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>

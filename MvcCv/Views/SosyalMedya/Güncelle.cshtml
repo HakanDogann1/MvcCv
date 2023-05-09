@@ -1,0 +1,25 @@
+﻿@model MvcCv.Models.Entity.TBLSosyalMedya
+@{
+
+    ViewBag.Title = "Güncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<form method="post" class="form-group">
+    <div>
+        @Html.Label("İd")
+        @Html.TextBoxFor(m=>m.Id , new {@class="form-control"})
+    </div>
+    <div>
+        @Html.Label("Ad")
+        @Html.TextBoxFor(m => m.Ad, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.Label("Link")
+        @Html.TextBoxFor(m => m.Link, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-info">Güncelle</button>
+    </div>
+</form>

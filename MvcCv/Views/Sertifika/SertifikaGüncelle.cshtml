@@ -1,0 +1,23 @@
+﻿@model MvcCv.Models.Entity.TBLSertifikalarım
+@{
+    ViewBag.Title = "SertifikaGüncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form-group">
+    <div>
+        @Html.Label("İd")
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.Label("Tarih")
+        @Html.TextBoxFor(m => m.Tarih, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.Label("Açıklama")
+        @Html.TextBoxFor(m => m.Aciklama, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-info">Güncelle</button>
+    </div>
+</form>
